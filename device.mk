@@ -309,6 +309,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.safailnet.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.usb.rc \
