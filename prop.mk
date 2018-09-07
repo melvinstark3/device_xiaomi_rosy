@@ -142,6 +142,7 @@ mmp.enable.3g2=true \
 vendor.audio.hw.aac.encoder=true \
 vendor.vidc.dec.downscalar_height=1088 \
 vendor.vidc.dec.downscalar_width=1920 \
+media.stagefright.thumbnail.prefer_hw_codecs=true \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
 vendor.vidc.enc.disable_bframes=1 \
