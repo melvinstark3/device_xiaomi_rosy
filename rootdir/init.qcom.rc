@@ -413,13 +413,13 @@ on property:ro.vendor.iocgrp.config=1
     write /dev/blkio/blkio.weight 1000
     write /dev/blkio/bg/blkio.weight 100
 
-service vendor.cnd /system/vendor/bin/cnd
+service vendor.cnd /vendor/bin/cnd
     class main
     user system
     group system wifi inet radio wakelock net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
+service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group system
@@ -455,24 +455,24 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     group system radio
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.netmgrd /system/vendor/bin/netmgrd
+service vendor.netmgrd /vendor/bin/netmgrd
     class main
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
+service vendor.ipacm-diag /vendor/bin/ipacm-diag
     class main
     user radio
     socket ipacm_log_file dgram 660 radio radio
     group radio diag oem_2901
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ipacm /system/vendor/bin/ipacm
+service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.dataqti /system/vendor/bin/qti
+service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
@@ -519,7 +519,7 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     disabled
     oneshot
 
-service loc_launcher /system/vendor/bin/loc_launcher
+service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
@@ -561,7 +561,7 @@ service vendor.charger /system/bin/chargeonlymode
     group system graphics input
     seclabel u:r:charger:s0
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
@@ -579,7 +579,7 @@ on property:init.svc.surfaceflinger=restarting
     start vendor.hwcomposer-2-1
     start vendor.hwcomposer-2-2
 
-service vendor.time_daemon /system/vendor/bin/time_daemon
+service vendor.time_daemon /vendor/bin/time_daemon
     class main
     user system
     group system
