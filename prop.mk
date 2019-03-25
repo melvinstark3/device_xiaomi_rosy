@@ -111,6 +111,10 @@ persist.qfp=false
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.fm.transmitter=false
 
+# Enable QC2 bufferqueue block-pool
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.qc2.use.bqpool=1
+
 # Frp
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/config
