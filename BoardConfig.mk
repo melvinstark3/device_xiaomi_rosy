@@ -51,6 +51,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/rosy
 TARGET_KERNEL_CONFIG := rosy-doge_defconfig
 TARGET_KERNEL_VERSION := 3.18
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := $(shell grep -v based prebuilts/clang/host/$(HOST_OS)-x86/*/AndroidVersion.txt | sort | tail -n 1 | cut -d : -f 2)
 
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
