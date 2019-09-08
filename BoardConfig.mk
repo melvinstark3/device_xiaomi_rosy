@@ -208,8 +208,8 @@ endif
 VENDOR_SECURITY_PATCH := 2019-05-01
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/minimal_sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
