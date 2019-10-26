@@ -344,10 +344,19 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
     libxml2 \
-    telephony-ext
+    telephony-ext \
+    ims-ext-common_system \
+    rild \
+    libprotobuf-cpp-full \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    ims_ext_common.xml
 
-#PRODUCT_BOOT_JARS += \
-#    telephony-ext
+PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
+    telephony-ext
 
 # Pre-opt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
