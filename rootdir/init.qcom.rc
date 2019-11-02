@@ -35,6 +35,13 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    # Set permissions for persist partition
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/bms 0700 root system
+    mkdir /mnt/vendor/persist/data 0700 system system
+    restorecon_recursive /mnt/vendor/persist
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
