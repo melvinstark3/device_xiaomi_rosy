@@ -462,6 +462,9 @@
         <item>evdo:4094,87380,524288,4096,16384,262144</item>
     </string-array>
 
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
+
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
