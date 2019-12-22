@@ -637,6 +637,7 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
 service vendor.charger /system/bin/chargeonlymode
     class charger
     user system
+    capabilities SYS_BOOT
     group system graphics input
     seclabel u:r:charger:s0
 
