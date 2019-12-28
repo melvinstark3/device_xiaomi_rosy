@@ -154,8 +154,10 @@ ro.lmk.critical_upgrade=false \
 ro.lmk.upgrade_pressure=100 \
 ro.lmk.downgrade_pressure=100 \
 ro.lmk.kill_heaviest_task=true \
-ro.lmk.kill_timeout_ms=100 \
-ro.lmk.use_minfree_levels=true
+ro.lmk.kill_timeout_ms=15 \
+ro.lmk.use_minfree_levels=true \
+ro.lmk.enhance_batch_kill=true \
+ro.lmk.vmpressure_file_min=80640
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
