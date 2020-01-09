@@ -19,6 +19,8 @@ DEVICE_PATH := device/xiaomi/rosy
 # Assert
 TARGET_OTA_ASSERT_DEVICE := rosy
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
