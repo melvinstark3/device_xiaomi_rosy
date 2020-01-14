@@ -212,6 +212,10 @@ VENDOR_SECURITY_PATCH := 2019-05-01
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/minimal_sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/hw/camera.msm8953.so|libshims_camera.so
+
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true

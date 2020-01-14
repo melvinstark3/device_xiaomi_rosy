@@ -364,7 +364,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libgpu_mapper_shim
+    libgpu_mapper_shim \
+    libshims_camera
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
